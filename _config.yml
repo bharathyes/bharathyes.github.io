@@ -9,6 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bharathyes.me" # the base hostname & protocol for your site
 twitter_username: s4bharath
 github_username:  bharathyes
+flickr_username: bharathyes
 
 # Build settings
 markdown: kramdown

@@ -11,9 +11,10 @@
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
-
+      
       <div class="footer-col  footer-col-2">
         <ul class="social-media-list">
+          <li>Contact Me</li>
           {% if site.github_username %}
           <li>
             <a href="https://github.com/{{ site.github_username }}">
@@ -42,6 +43,18 @@
             </a>
           </li>
           {% endif %}
+          
+          {% if site.flickr_username %}
+          <li>
+              <a href="https://www.flickr.com/photos/{{ site.flickr_username }}" class="sc-btn sc--flickr">
+                  <span class="sc-icon">
+                      <svg viewBox="0 0 33 33" width="15" height="15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path fill="#828282" d="M 26.668,0L 5.334,0 C 2.4,0,0,2.4,0,5.334l0,21.332 C0,29.602, 2.4,32, 5.334,32l 21.334,0 C 29.601,32, 32,29.601, 32,26.666L 32,5.334 C 32,2.4, 29.601,0, 26.668,0z M 9,21c-2.761,0-5-2.239-5-5 c0-2.761, 2.239-5, 5-5s 5,2.239, 5,5C 14,18.761, 11.761,21, 9,21z M 23,21c-2.761,0-5-2.239-5-5 c0-2.761, 2.239-5, 5-5s 5,2.239, 5,5C 28,18.761, 25.762,21, 23,21z"></path></g></svg>
+                  </span>
+                  <span class="username">{{ site.flickr_username }}</span>
+              </a>
+          </li>
+          {% endif %}
+          
         </ul>
       </div>
 
