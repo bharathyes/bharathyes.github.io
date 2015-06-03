@@ -1,14 +1,14 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Bharath Srinivasan
+email: admin@bharathyes.me
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    An awesome coder, movie fanatic and a proud Macintosh owner.
+    Catch here the amazing geeky stuff I do from time to time.
+    From the amazing city, Chennai, TN.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://bharathyes.me" # the base hostname & protocol for your site
+twitter_username: s4bharath
+github_username:  bharathyes
 
 # Build settings
 markdown: kramdown
