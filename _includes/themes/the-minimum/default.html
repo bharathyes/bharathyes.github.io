@@ -12,6 +12,19 @@
 	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/{{ site.author.feedbaname }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+    
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BlogPosting",
+            "headline": "{{ page.title }}",
+            "alternativeHeadline": "",
+            "image": ["{{ image }}"],
+            "datePublished": "{{ page.date }}",
+            "description": "{{ page.description }}",
+            "articleBody": "{{ page.excerpt }}"
+        }
+    </script>
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
         <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
@@ -86,18 +99,6 @@ search_field.addEventListener('blur', function (ev) {
                               this.style.background = null;
                               });
                               
-</script>
-<script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "{{ page.title }}",
-        "alternativeHeadline": "",
-        "image": ["{{ image }}"],
-        "datePublished": "{{ page.date }}",
-        "description": "{{ page.description }}",
-        "articleBody": "{{ psge.excerpt }}"
-    }
 </script>
 <script>
 	(function(d, s) {
