@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>{{ page.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-	<meta name="author" content="{{ site.author.name }}">
+	<meta name="author" content="{{ site.author }}">
 	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/{{ site.author.feedbaname }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
@@ -26,10 +26,10 @@
 				<p class="logo"><a href="{{ HOME_PATH }}">{{ site.title }}</a></p>
 				<nav class="nav-global">
 					<ul>
-						<li class="page"><a href="/pages.html">pages</a></li>
-						<li class="category"><a href="/categories.html">categories</a></li>
-						<li class="tag"><a href="/tags.html">tags</a></li>
-						<li class="archive"><a href="/archive.html">archive</a></li>
+						<li class="category"><a href="/categories">categories</a></li>
+						<li class="tag"><a href="/tags">tags</a></li>
+   						<li class="page"><a href="/pages">pages</a></li>
+						<li class="archive"><a href="/archive">archive</a></li>
                         <li><form action="http://www.google.com/cse" id="cse-search-box">
                             <input type="hidden" name="cx" value="006415395967630503844:jiymnx3fd_a" />
                             <input type="hidden" name="ie" value="UTF-8" />
@@ -59,6 +59,8 @@
 						<li class="contact"><address><span class="author fn n">{{ site.author }}</span> - <span class="fn email"><a href="mailto:admin@bharathyes.me">{{ site.email }}</a></span></address></li>
 						<li class="github"><a href="http://github.com/{{ site.github_username }}/" rel="me">GitHub</a></li>
 						<li class="twitter"><a href="http://twitter.com/{{ site.twitter_username }}/" rel="me">Twitter</a></li>
+                        <li class="facebook"><a href="http://www.facebook.com/{{ site.facebook_username }}/" rel="me">Facebook</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/{{ site.flickr_username }}/" rel="me">Flickr Photstream</a></li>
 						<li class="rss"><a href="http://feeds.feedburner.com/{{ site.feedburner }}">Subscribe to RSS Feed</a></li>
 					</ul>
 				</div><!-- misc -->

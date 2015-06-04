@@ -427,6 +427,11 @@ pre {
   margin-bottom: 0;
 }
 /* post & page */
+
+.post-title a {
+    color: red;
+}
+
 .layout-page .tag_box {
   background: url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png') repeat 0 0 #999999;
   padding: 0.8125em;
