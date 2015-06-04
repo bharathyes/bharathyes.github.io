@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "My First Post via Jekyll"
+description: "First post on Jekyll based website."
 date:   2015-06-04 01:56:20
 categories: first-post intro
 tags: intro new-post
+image:
 ---
 
 >"Innovation distinguishes between a leader and a follower.”

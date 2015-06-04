@@ -87,7 +87,18 @@ search_field.addEventListener('blur', function (ev) {
                               });
                               
 </script>
-
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ page.title }}",
+        "alternativeHeadline": "",
+        "image": ["{{ image }}"],
+        "datePublished": "{{ page.date }}",
+        "description": "{{ page.description }}",
+        "articleBody": "{{ content }}"
+    }
+</script>
 <script>
 	(function(d, s) {
 		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
