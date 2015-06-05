@@ -20,7 +20,7 @@ tags : [Home]
 <h4>{{ post.excerpt | strip_html }}</h4>
 {% endif %}
 {% if post.image %}
-<img src="{{ post.image }}" alt="" />
+<img src="{{ post.image }}" alt="" height="500px"/>
 {% endif %}
 </a>
 </li>
