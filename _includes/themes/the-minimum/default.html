@@ -12,7 +12,11 @@
 	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/{{ site.author.feedbaname }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
-    
+    <style>
+        .gsc-input-box {
+        width:10;
+        }
+    </style>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -25,14 +29,27 @@
             "articleBody": "{{ page.excerpt }}"
         }
     </script>
+    
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
+    <!--script>(function(d, s, id) {
              var js, fjs = d.getElementsByTagName(s)[0];
              if (d.getElementById(id)) return;
              js = d.createElement(s); js.id = id;
              js.src = "//connect.facebook.net/en_IN/sdk.js#xfbml=1&version=v2.3&appId=115162605483909";
              fjs.parentNode.insertBefore(js, fjs);
-             }(document, 'script', 'facebook-jssdk'));</script>
+             }(document, 'script', 'facebook-jssdk'));</script-->
+    <script>
+        (function() {
+         var cx = '006415395967630503844:jiymnx3fd_a';
+         var gcse = document.createElement('script');
+         gcse.type = 'text/javascript';
+         gcse.async = true;
+         gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+         '//cse.google.com/cse.js?cx=' + cx;
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(gcse, s);
+         })();
+        </script>
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
         <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
@@ -50,14 +67,27 @@
 						<li class="category"><a href="/categories">categories</a></li>
 						<li class="tag"><a href="/tags">tags</a></li>
    						<li class="page"><a href="/pages">pages</a></li>
-						<li class="archive"><a href="/archive">archive</a></li>
-                        <li><form action="http://www.google.com/cse" id="cse-search-box">
+                        <li class="archive"><a href="/archive">archive</a></li>
+                        <!--li>
+                         <form action="http://cse.google.com/cse" id="cse-search-box">
+                         <form id="searchbox_006415395967630503844:jiymnx3fd_a" action="">
+                            <input value="006415395967630503844:jiymnx3fd_a" name="cx" type="hidden"/>
+                            <input value="FORID:11" name="cof" type="hidden"/>
+                            <input type="text" name="q" id="cse-search-field" placeholder="Search" />
+                            <input type="submit" name="sa" value="Search" id="cse-search-button" />
+                            <input id="q" style="" name="q" size="" type="text"/>
+                            <button class="btn">Search</button>
+                        </form></li-->
+                        <li><form id="searchbox_006415395967630503844:jiymnx3fd_a" action="">
                             <input type="hidden" name="cx" value="006415395967630503844:jiymnx3fd_a" />
                             <input type="hidden" name="ie" value="UTF-8" />
                             <input type="text" name="q" id="cse-search-field" placeholder="Search" />
                             <input type="submit" name="sa" value="Search" id="cse-search-button" />
+                            <input type="hidden" name="siteurl" value="bharathyes.me/" />
+                            <input type="hidden" name="ref" value="" />
+                            <input type="hidden" name="ss" value="3498j4602052j7#gsc.tab=0&gsc.q=jekyll&gsc.page=1" />
                         </form></li>
-					</ul>
+                    </ul>
 				</nav>
 			</div><!-- unit-inner -->
 		</div><!-- unit-head -->
@@ -71,6 +101,9 @@
 			</div><!-- unit-inner -->
 		</div><!-- unit-body -->
 	</div><!-- body -->
+    <div>
+        
+    </div>
 	<footer class="the-footer">
 		<div class="unit-foot">
 			<div class="unit-inner unit-foot-inner">
@@ -83,6 +116,7 @@
                         <li class="facebook"><a href="http://www.facebook.com/{{ site.facebook_username }}/" rel="me" target="_blank">Facebook</a></li>
                         <li class="flickr"><a href="http://www.flickr.com/photos/{{ site.flickr_username }}/" rel="me" target="_blank">Flickr Photstream</a></li>
 						<li class="rss"><a href="http://feeds.feedburner.com/{{ site.feedburner }}" target="_blank">Subscribe to RSS Feed</a></li>
+                        <li><gcse:search></gcse:search></li>
 					</ul>
 				</div><!-- misc -->
 				<p class="licence">
@@ -128,3 +162,7 @@ search_field.addEventListener('blur', function (ev) {
   {% include JB/analytics %}
 </body>
 </html>
+
+
+
+
