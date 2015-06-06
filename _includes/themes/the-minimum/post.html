@@ -14,20 +14,20 @@
 					{{ content }}
 					<div class="meta">
 						<p class="date-publish">
-							Published: 
-							<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
-							<span class="month"><abbr>{{ page.date | date: '%B' }}</abbr></span>
-							<span class="day">{{ page.date | date: '%d' }}</span>
+							<em>Published:</em>
+							<date itemprop="datePublished" content="{{ page.date | date: '%Y' }}-{{ page.date | date: '%m' }}-{{ page.date | date: '%d' }}" class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+							<span class="month"><abbr> &nbsp; {{ page.date | date: '%B' }}&nbsp;</abbr></span>
+							<span class="day">{{ page.date | date: '%d' }}, &nbsp;</span>
 							<span class="year">{{ page.date | date: '%Y' }}</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
-							<li class="list-head">Category: &nbsp; </li>
+							<li class="list-head"><em>Category: &nbsp; </em></li>
 							{% assign categories_list = page.categories %}
 							{% include JB/categories_list %}&nbsp;
 						</ul>
 						<ul class="list-tag list-linear">
-							<li class="list-head">Tags: &nbsp; </li>
+							<li class="list-head"><em>Tags: &nbsp; </em></li>
 							{% assign tags_list = page.tags %}
 							{% include JB/tags_list %}&nbsp;
 						</ul>

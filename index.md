@@ -8,10 +8,10 @@ tags : [Home]
 <ul class="post-list">
 {% for post in site.posts %}
 <li>
-<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
 
 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-<h2 class="post-title">
+<h2 class="post-title" style="color:#E16400;">
 {{ post.title }}
 </h2>
 {% if post.description %}
@@ -20,8 +20,8 @@ tags : [Home]
 <h4>{{ post.excerpt | strip_html }}</h4>
 {% endif %}
 {% if post.image %}
-<img src="{{ post.image }}" alt="" height="500px"/>
-{% endif %}
+<img src="{{ post.image }}" alt="" max-height="500px"/>
+{% endif %}<hr>
 </a>
 </li>
 {% endfor %}
